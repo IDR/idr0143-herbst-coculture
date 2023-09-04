@@ -1,0 +1,137 @@
+---
+name: idr0143-herbst-coculture/screenA
+version: 1
+
+defaults:
+  include: false
+  type: string
+  includeclient: true
+  visible: true
+  omitempty: true
+
+columns:
+
+  - name: Experimental Condition [Culture]
+    clientname: Culture
+    include: true
+
+  - name: Experimental Condition [Patient ID]
+    clientname: Patient ID
+    include: true
+
+  - name: Characteristics [Sex]
+    clientname: Sex
+    include: true
+
+  - name: Characteristics [Age]
+    clientname: Age
+    include: true
+
+  - name: Control Type
+    clientname: Control Type
+    include: true
+
+  - name: Viability
+    clientname: Viability
+    include: true
+
+  - name: Viability_norm
+    clientname: Viability_norm
+    include: true
+
+
+  ######################################################################
+  # mapr groups
+  ######################################################################
+
+  - group:
+      namespace: openmicroscopy.org/mapr/organism
+      columns:
+        - name: Characteristics [Organism]
+          clientname: Organism
+          include: true
+
+  - group:
+      namespace: openmicroscopy.org/mapr/cell_line
+      columns:
+        - name: Characteristics [Cell Line]
+          clientname: Cell Line
+          include: true
+
+  - group:
+      namespace: openmicroscopy.org/mapr/compound
+      columns:
+        - name: Compound 1 Name
+          clientname: Compound Name
+          include: yes
+        - name: Compound 1 PubChem CID
+          clientname: Compound Name URL
+          clientvalue: >-
+            https://pubchem.ncbi.nlm.nih.gov/compound/{{ value|urlencode }}
+          include: yes
+
+  - group:
+      namespace: openmicroscopy.org/mapr/compound
+      columns:
+        - name: Compound 2 Name
+          clientname: Compound Name
+          include: yes
+        - name: Compound 2 PubChem CID
+          clientname: Compound Name URL
+          clientvalue: >-
+            https://pubchem.ncbi.nlm.nih.gov/compound/{{ value|urlencode }}
+          include: yes
+
+  - group:
+      namespace: openmicroscopy.org/mapr/compound/supplementary
+      columns:
+        - name: Compound 1 Name
+          clientname: Compound Name
+          include: yes
+        - name: Compound 1 PubChem CID
+          clientname: PubChem CID
+          include: yes
+        - name: Compound 1 Concentration (microMolar)
+          clientname: Concentration (microMolar)
+          include: yes
+        - name: Compound 1 InChIKey
+          clientname: InChIKey
+          include: yes
+        - name: Compound 1 SMILES
+          clientname: SMILES
+          include: yes
+
+  - group:
+      namespace: openmicroscopy.org/mapr/compound/supplementary
+      columns:
+        - name: Compound 2 Name
+          clientname: Compound Name
+          include: yes
+        - name: Compound 2 PubChem CID
+          clientname: PubChem CID
+          include: yes
+        - name: Compound 2 Concentration (microMolar)
+          clientname: Concentration (microMolar)
+          include: yes
+        - name: Compound 2 InChIKey
+          clientname: InChIKey
+          include: yes
+        - name: Compound 2 SMILES
+          clientname: SMILES
+          include: yes
+
+
+advanced:
+  well_to_images: true
+  ignore_missing_primary_key: true
+  primary_group_keys:
+    - namespace: openmicroscopy.org/mapr/organism
+      keys:
+        - Organism
+    - namespace: openmicroscopy.org/mapr/cell_line
+      keys:
+        - Cell Line
+    - namespace: openmicroscopy.org/mapr/compound
+      keys:
+        - Compound Name
+        - Compound Name URL
