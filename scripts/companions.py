@@ -14,6 +14,8 @@ img_x = 2160
 img_y = 2160
 pix_type = "uint16"
 
+channel_names = {"0": "HOECHST 33342", "1": "Lysosomal dye NIR", "2": "Calcein"}
+
 files = {}
 with open(file_list, 'r') as read:
     for line in read.readlines():
@@ -49,7 +51,12 @@ for plate_name, tifs in files.items():
         if not key in images:
             images[key] = Image(key, img_x, img_y, 1, n_c, 1, order=order, type=pix_type)
             for i in range(0, n_c):
-                images[key].add_channel(samplesPerPixel=1)
+                chn = str(i)
+                if chn in channel_names:
+                    chn = channel_names[chn]
+                else:
+                    print(f" channel name {i} not found ({plate_name})")
+                images[key].add_channel(samplesPerPixel=1, name=f"{chn}")
         images[key].add_plane(c=int(m['channel'])-1, z=0, t=0)
         rel_path = re.sub(r"^.+-ftp\/", "", file)
         images[key].add_tiff(rel_path, c=int(m['channel'])-1, z=0, t=0, planeCount=1)

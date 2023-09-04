@@ -11,6 +11,9 @@ from omero.rtypes import (
 )
 
 """
+
+NOTE: THIS DOES WORK, the ROIs don't match anything on the images, something's wrong.
+
 Creates ROIs from the ObjectList_.*.xml files. Just call it with the
 xml file as first and only argument.
 
@@ -31,8 +34,6 @@ def create_rect(x, y, w, h, text=None):
     rect.height = rdouble(h)
     if text:
         rect.textValue = rstring(text)
-    rect.theZ = rint(0)
-    rect.theT = rint(0)
     return rect
 
 
@@ -42,8 +43,6 @@ def create_point(x, y, text=None):
     p.y = rdouble(y)
     if text:
         p.textValue = rstring(text)
-    p.theZ = rint(0)
-    p.theT = rint(0)
     return p
 
 
@@ -67,8 +66,10 @@ def process_file(file, conn):
     plate_name = re.sub("^Screen_", "", plate_name)
     mip_name = re.sub(r"_Day.+$", "_MIP", plate_name)
     print(f"Processing Plates: {plate_name} and {mip_name}")
-    plate = conn.getObject('Plate', attributes={'name': plate_name})
-    mip = conn.getObject('Plate', attributes={'name': mip_name})
+
+    plate = next(conn.getObjects('Plate', attributes={'name': plate_name}))
+    mip = next(conn.getObjects('Plate', attributes={'name': mip_name}))
+    print(f"Ids: {plate.getId()} and {mip.getId()}")
 
     for rt_el in root.findall("n:ResultTable", NS):
         type = rt_el.findtext("n:Name", namespaces=NS)
@@ -89,9 +90,9 @@ def process_file(file, conn):
                     bb = bb.split(",")
                     x = int(bb[0])
                     y = int(bb[1])
-                    w = int(bb[2])
-                    h = int(bb[3])
-                    print(f"Object: {n}, Point: X: {p_x}, Y: {p_y}")
+                    w = int(bb[2]) - x
+                    h = int(bb[3]) - y
+                    print(f"Object: {n}\nPoint: X: {p_x}, Y: {p_y}")
                     print(f"Box: x: {x}, Y: {y}, w: {w}, h: {h}")
                     if image:
                         roi = create_roi(image, p_x, p_y, x, y, w, h, n)
