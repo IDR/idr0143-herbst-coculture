@@ -1,0 +1,124 @@
+# FILL IN AS MUCH INFORMATION AS YOU CAN.  HINTS HAVE BEEN PUT IN SOME FIELDS AFTER THE HASH # SYMBOL. REPLACE THE HINT WITH TEXT WHERE APPROPRIATE.															
+# STUDY DESCRIPTION SECTION																																	
+# Section with generic information about the study including title, description, publication details (if applicable) and contact details									
+																																	
+Comment[IDR Study Accession]	idr0143																																
+Study Title	Comparing the value of mono- versus coculture for high-throughput compound screening in hematological malignancies																														
+Study Type	high content screen																																
+Study Type Term Source REF	EFO																																
+Study Type Term Accession	EFO_0007550																																
+Study Description	Large-scale compound screens are a powerful model system for understanding variability of treatment response and for discovering druggable tumor vulnerabilities of hematological malignancies. However, as mostly performed in a monoculture of tumor cells, these assays disregard modulatory effects of the in vivo microenvironment. It is an open question whether and to what extent coculture with bone marrow stromal cells could improve the biological relevance of drug testing assays over monoculture. Here, we established a high throughput platform to measured ex vivo sensitivity of 108 primary blood cancer samples to 50 drugs in monoculture and in coculture with bone marrow stromal cells. Stromal coculture conferred resistance to 52 % of compounds in chronic lymphocytic leukemia (CLL) and to 36 % of compounds in acute myeloid leukemia (AML), including chemotherapeutics, BCR inhibitors, proteasome inhibitors and BET inhibitors. While most of the remaining drugs were similarly effective in mono- and coculture, oOnly the JAK inhibitors ruxolitinib and tofacitinib exhibited increased efficacy in AML and CLL stromal coculture. We further confirmed the importance of JAK-STAT signaling for stroma-mediated resistance by showing that stromal cells induce phosphorylation of STAT3 in CLL cells. We genetically characterized the 108 cancer samples and found that drug-gene associations agreed strongly correlated well between mono- and coculture. OverallHowever, effect sizes were lower in coculture, thus with more drug-gene associations were detected in monoculture than in coculture. Our results suggest justifies a two-step strategy for drug perturbation testing, with large-scale screening performed in monoculture, followed by focused evaluation of potential stroma-mediated resistances in coculture. 																
+Study Key Words	Chronic lymphocytic leukemia	Acute myeloid leukemia	Hairy cell leukemia	Mantle cell lymphoma	co-culture	stroma	HS-5	mono-culture	compounds																												
+Study Organism	Homo sapiens																														
+Study Organism Term Source REF	NCBITaxon																																
+Study Organism Term Accession	9606																																
+Study Screens Number	1																																
+Study External URL	
+Study BioImage Archive Accession																															
+Study Public Release Date																																	
+
+																																	
+# Study Publication																																	
+Study PubMed ID	37352275																																
+Study Publication Title	Comparing the value of mono- versus coculture for high-throughput compound screening in hematological malignancies																																
+Study Author List	Herbst SA, Kim V, Roider T, Schitter EC, Bruch PM, Liebers N, Kolb C, Knoll M, Lu J, Dreger P, Müller-Tidow C, Zenz T, Huber W, Dietrich S																			
+Study PMC ID																																	
+Study DOI	https://doi.org/10.1182/bloodadvances.2022009652																																
+
+																																	
+# Study Contacts																																	
+Study Person Last Name	Dietrich																																
+Study Person First Name	Sascha																																
+Study Person Email	sascha.dietrich@embl.de																																
+Study Person Address	Department of Hematology and Oncology, University Hospital Düsseldorf
+Moorenstr. 5, 40225 Düsseldorf, Germany																																
+Study Person ORCID	0000-0002-0648-1832																															
+Study Person Roles	submitter																																
+	
+																																
+# Study License and Data DOI																																	
+Study License	CC BY 4.0																																
+Study License URL	https://creativecommons.org/licenses/by/4.0/																																
+Study Copyright	Herbst, Kim, Roider et al.																																
+Study Data Publisher	University of Dundee																																
+Study Data DOI																																
+																																	
+Term Source Name	NCBITaxon	EFO	CMPO	Fbbi																													
+Term Source File	http://purl.obolibrary.org/obo/	http://www.ebi.ac.uk/efo/	http://www.ebi.ac.uk/cmpo/	http://purl.obolibrary.org/obo/																													
+																																	
+																																	
+# SCREEN SECTION																																	
+# Screen Section containing all information relative to each screen in the study including materials used, protocols names and description, phenotype names and description. 									
+# For multiple screens this section should be repeated.  Copy and paste the whole section below and fill out for the next screen.																					
+																																	
+Screen Number	1																																
+Comment[IDR Screen Name]	idr0143-herbst-coculture/screenA	
+Screen Sample Type	cell																															
+Screen Description	To systematically assess whether coculture studies provide superior biological insights for drug screening, we performed a large-scale study comparing compound efficacy in leukemia monoculture and leukemia-stroma coculture. We used the well-established bone-marrow derived stroma cell line HS-5 and an imaging-based platform to investigate not only drug effects in mono- and leukemia-stroma coculture but also to capture cellular changes due to the stromal environment and drug treatments.																															
+Screen Size	Plates: 384 well plate	5D Images: 	Planes: xyz	Average Image Dimension (XYZCT): 	Total Tb: 														
+Screen Example Images	180413_Plate4 K22																														
+Screen Imaging Method	spinning disk confocal microscopy																																
+Screen Imaging Method Term Source REF	FBbi																																
+Screen Imaging Method Term Accession	FBbi_00000253																																
+Screen Technology Type	compound screen																															
+Screen Technology Type Term Source REF	EFO																																
+Screen Technology Type Term Accession	EFO_0007553																																
+Screen Type	primary screen																												
+Screen Type Term Source REF	EFO																															
+Screen Type Term Accession	EFO_0007556																															
+Screen Organism																																	
+Screen Organism Term Source REF	NCBITaxon																																
+Screen Organism Term Accession																																
+Screen Comments	
+																																
+																																	
+# Library section. The library file should be supplied separately and it should contain  the reagents description including, at the absolute minimum: reagent ID, sequences and position in the layout (= plate + position in the plate)																																	
+Library File Name	idr0143-screenA-annotation																																
+Library File Format	tab-delimited text																																
+Library Type	compound library																																
+Library Type Term Source REF	EFO																																
+Library Type Term Accession	EFO_0007569																																
+Library Manufacturer	Most compounds were purchased from Selleck Chemicals																																
+Library Version																																	
+Library Experimental Conditions																																	
+Library Experimental Conditions Term Source REF	EFO																																
+Library Experimental Conditions Term Accession																																	
+Quality Control Description	Patient cell viability and counts were analyzed using Trypan Blue (Thermo Fisher Scientific). Percentages of alive cells always exceeded 90 % at culture start or freezing of pellets. Drug concentrations which were toxic to stroma cells were excluded, as these do not represent proper co-cultures. The degree of stroma cell death was assessed by evaluating the percentage of area covered by stroma cells using the image analysis software Harmony (Perkin Elmer). For this, all nuclei were segmented in the Hoechst channel and CLL nuclei were excluded by setting a size threshold. Next, the cytoplasm of stroma cells was found using the signal from the lysosomal dye as proxy. Conditions in which less than 40% of the image area was covered by stroma were classified as toxic conditions.																														
+																																	
+# Protocols																																	
+Protocol Name	growth protocol	treatment protocol	HCS library protocol	HCS image acquisition and feature extraction protocol	HCS data analysis protocol																												
+Protocol Type	growth protocol	treatment protocol	HCS library protocol	HCS image acquisition and feature extraction protocol	HCS data analysis protocol																												
+Protocol Type Term Source REF	EFO	EFO	EFO	EFO	EFO																												
+Protocol Type Term Accession	EFO_0003789	EFO_0003969	EFO_0007571	EFO_0007572	EFO_0007573																												
+Protocol Description	HS-5 cells were cultured in DMEM (Thermo Fisher Scientific) supplemented with 10 % fetal bovine serum (FBS; Thermo Fisher Scientific), 1 % penicillin/streptomycin (Thermo Fisher Scientific) and 1 % glutamine (Thermo Fisher Scientific) in a humidified atmosphere at 37° C and 10 % CO2. Patient samples were selected based on availability and tumor cell content higher than 80 %. Clinical flow cytometry data were used to estimate the proportion of malignant cells in collected blood samples. Peripheral blood mononuclear cells (PBMCs) were isolated using Ficoll density gradient centrifugation. Cells were viably frozen in RPMI (Thermo Fisher Scientific) containing 45 % FBS (Thermo Fisher Scientific) and 10 % DMSO (SERVA Electrophoresis GmbH) and kept on liquid nitrogen until use. Cells were thawed freshly before the experiment and rolled in serum containing medium for 3 hours on a roll mixer at room temperature to allow cells to recover. To deplete dead cells, which form clumps during this procedure, the suspension was filtered through a 40 μm cell strainer (Sarstedt). Drug screens were carried out in CellCarrier-384 Ultra Microplates (Perkin Elmer) with a seeding density of HS-5 stromal cells of 1x104 cells/well and 2x10 4 patient cells per well. The screen was carried out in DMEM (Thermo Fisher Scientific) supplemented with 10 % human serum (male AB, H6914-100ml Batch SLBT2873, Sigma-Aldrich), 1 % penicillin/streptomycin (Thermo Fisher Scientific) and 1 % glutamine (Thermo Fisher Scientific) at a final volume of 40 μL in the culture plates. Cells were incubated at 37 °C in a humidified atmosphere and 10 % CO 2 for 3 days.	For the screen, 50 drugs were probed at 3 different concentrations (Supplementary Table 1). Drug concentrations ranged from subnanomolar to low micromolar and were chosen based on previous experience with the drugs [3]. Increase of the concentration was 15-fold per step to cover a broad spectrum of concentrations. Drugs were diluted according to the manufacturer's instructions. Further dilution was carried out in DMSO (SERVA Electrophoresis GmbH) and master plates containing 4 μL of diluted drugs were frozen at -20 °C for direct use on the screening days.	Compounds were chosen based on whether they are in clincal use for the treatment of leukemia, target pathways known to be important in leukemia or have been described in the context of co-cultures.	High-throughput screening was conducted using Opera Phenix High Content Screening System (Perkin Elmer). CLL screening plates were stained with 4 μg/ml Hoechst 33342 (Invitrogen) and 1 μl/ml lysosomal dye NIR (Abcam). Plates of non-CLL entities were additionally stained with 1 μM Calcein AM (Invitrogen). All dyes were diluted using serum-free medium and staining solution was added to each well. After an incubation period of 45 minutes at 37 °C, three positions per well with a stack of ten images at a distance of 1.2 μm were acquired with a 40x water objective in confocal mode.	Images of CLL samples were processed using the image analysis software Harmony (Perkin Elmer). Results were further analyzed in the statistical programming language R (R Core Team, 2018).Maximum intensity projection and gamma correction (gamma = 0.3) was applied to all images. All 3 color channels (lysosomal dye, Calcein and Hoechst) were combined to generate RGB overlays. Each image (2160 x 2160, omitting the color channel axis) was cut into 9 blocks of size 720 x 720 to speed up training and prediction. Faster R-CNN object detection model [37] with Inception v2 [38] backbone architecture was used to detect patient-derived leukemia and lymphoma cells. The two defined classes were viable and apoptotic leukemia cells. The object detection model implemented in TensorFlow 1.14 was trained for 21,000 epochs on coculture images from 5 AML samples. 5 control and 5 drug-treated well images were randomly selected from each of the five AML plates, resulting in 5 * 10 * 9 = 450 images that were split into train / test sets with 80% / 20% ratio. The average precision (AP) on the test set was 0.99 and 0.93 for viable and apoptotic leukemia cells, respectively. The area under the ROC curve (AUCROC) was 0.98 for both viable and apoptotic leukemia cells. 																													
+																																	
+# Phenotypes																																	
+Phenotype Name																																
+Phenotype Description																																	
+Phenotype Score Type																																	
+Phenotype Term Source REF	CMPO																																
+Phenotype Term Name																																	
+Phenotype Term Accession	
+																																
+																																	
+# Raw Data Files																																	
+Raw Image Data Format																																
+Raw Image Organization	In total 113 plates were screened. Each plate contained cells from one individual patient. Three positions per well with a stack of ten images at a distance of 1.2 μm were acquired with a 40x water objective in confocal mode. 															
+																																	
+# Feature Level Data Files																																	
+Feature Level Data File Name																																	
+Feature Level Data File Description																																	
+Feature Level Data File Format																																	
+Feature Level Data Column Name																																	
+Feature Level Data Column Description																																	
+
+																																	
+#  Processed Data Files 																																	
+Processed Data File Name																																	
+Processed Data File Format	tab-delimited text																																
+Processed Data File Description																																	
+Processed Data Column Name																															
+Processed Data Column Type																																	
+Processed Data Column Annotation Level	 																																
+Processed Data Column Description																																	
+Processed Data Column Link To Library File								
