@@ -69,7 +69,7 @@ Screen Type Term Accession	EFO_0007556
 Screen Organism																																	
 Screen Organism Term Source REF	NCBITaxon																																
 Screen Organism Term Accession																																
-Screen Comments	
+Screen Comments	180306_Plate1 is missing.
 																																
 																																	
 # Library section. The library file should be supplied separately and it should contain  the reagents description including, at the absolute minimum: reagent ID, sequences and position in the layout (= plate + position in the plate)																																	
