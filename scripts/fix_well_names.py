@@ -19,16 +19,13 @@ parser.add_argument("--colzero", action="store_true", default=False, help="Colum
 args = parser.parse_args()
 
 new_name = f"{args.name} 2"
-
 pat = re.compile(args.regex)
-
 
 buffer = []
 header = None
 with open(args.file) as infile:
     reader = csv.DictReader(infile, delimiter=",")
     header = reader.fieldnames
-    header.insert(header.index(args.name)+1, new_name)
     for i, row in enumerate(reader):
         m = pat.match(row[args.name])
         if m:
@@ -39,11 +36,13 @@ with open(args.file) as infile:
             if args.colzero:
                 c += 1
             row[new_name] = f"{row_indices[r]}{c}"
-            buffer.append(row)
         else:
             print(f"{args.regex} doesn't match for {row[args.name]} (line {i})")
+        buffer.append(row)
+
 
 with open(args.file, "w") as outfile:
+        header.insert(header.index(args.name), new_name)
         writer = csv.DictWriter(outfile, delimiter=",", fieldnames=header)
         writer.writeheader()
         for row in buffer:
