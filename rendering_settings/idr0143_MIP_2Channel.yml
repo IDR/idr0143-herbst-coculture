@@ -1,0 +1,13 @@
+---
+channels:
+    1:
+        active: true
+        color: 0000FF
+        label: 'HOECHST 33342'
+    2:
+        active: true
+        color: FF0000
+        label: 'Lysosomal dye NIR'
+
+greyscale: false
+version: 2
