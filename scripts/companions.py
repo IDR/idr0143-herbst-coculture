@@ -64,6 +64,7 @@ for plate_name, tifs in files.items():
     # assemble plate
     plate = Plate(plate_name, n_rows, n_cols)
     wells = {}
+    ws_index = 0 # well sample index should be unique across the whole plate
     for well_pos, image in images.items():
         row = int(well_pos.split("|")[0])-1
         col = int(well_pos.split("|")[1])-1
@@ -71,7 +72,8 @@ for plate_name, tifs in files.items():
         key = f"{row}|{col}"
         if not key in wells:
             wells[key] = plate.add_well(row, col)
-        wells[key].add_wellsample(field, image)
+        wells[key].add_wellsample(ws_index, image)
+        ws_index += 1
 
     # write companion file
     companion_file = "{}.companion.ome".format(plate_name)
