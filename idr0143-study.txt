@@ -15,7 +15,7 @@ Study Organism Term Accession	9606
 Study Screens Number	1																																
 Study External URL	
 Study BioImage Archive Accession																															
-Study Public Release Date	2023-10-03																																	
+Study Public Release Date	2023-10-09																																	
 
 																																	
 # Study Publication																																	
